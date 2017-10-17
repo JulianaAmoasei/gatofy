@@ -55,15 +55,14 @@ main {
  #modal {
         /*display: none;*/
         position: relative;
-        left: 50%;
-        top: 50%;
+        margin: auto;
+        height: 50%;
         padding-top: 10px;
         width: 300px;
         background: #FBFBF0;
         border-radius: 5px;
         z-index: 9;
         font-family: arial;
-        transform: translate3d(-50%, -50%, 0);
       }
       
       .boxTexto {
@@ -128,5 +127,83 @@ main {
       }
 
        #fundo.visivel {
-        display: block;
+        display: flex;
+      }
+
+      .erro {
+        animation: shake 0.2s;
+      }
+
+#player {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+}
+
+.barra-musica {
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+/*.itens-musica {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}*/
+
+.musica {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.player-controls {
+  text-align: center;
+}
+
+.player-tempo {
+display: flex;
+align-items: center;
+flex-grow: 1;
+}
+
+.player-tempo span {
+  margin: 0 8px;
+}
+
+.player-barra {
+  flex-grow: 1;  
+  width: 100%;
+  background: gray;
+  height: 4px;
+}
+
+.tocado {
+  background: #FFFFFF;
+  width: 0%;
+  height: 4px;
+}
+
+.botao-play {
+  background: none;
+  border: none; 
+  margin-bottom: 10px;
+}
+
+
+      @keyframes shake {
+        0% {
+          transform: none;
+        }
+        33% {
+          transform: translateX(-7px);
+        }
+        66% {
+          transform: translateX(7px);
+        }
+        100% {
+          transform: none;
+        }
       }

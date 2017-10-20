@@ -1,4 +1,4 @@
-if (localStorage.usuario) {
+if (localStorage.usuarios) {
     var botao = document.querySelector("#botao");
     botao.innerText = localStorage.usuario;
 } else {

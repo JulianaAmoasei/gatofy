@@ -54,11 +54,30 @@ main {
   padding: 0 20px;
 }
 
- #modal {
+main > button {
+  background: #fff;
+  border: none;
+  padding: 10px 20px;
+  width: 120px;
+  color: #7f479a;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 1px 1px 5px 0px #444;
+  transition: background .3s cubic-bezier(0.19, 1, 0.22, 1), color .5s ease-out;
+}
+
+main > button:hover {
+  cursor: pointer;
+  background: #7f479a;
+  color: #fff;
+}
+
+#modal, #modal-cadastro {
         /*display: none;*/
         position: relative;
         margin: auto;
-        height: 50%;
+        /*height: 50%;*/
         padding-top: 10px;
         width: 300px;
         background: #FBFBF0;
@@ -77,6 +96,15 @@ main {
       }
       
       .boxEmail {
+        margin: 10px;
+        padding-left: 10px;
+        height: 30px;
+        border-radius: 15px;
+        border-width: 1px;
+        border-color: #7E459A;
+      }
+
+      .boxSenha {
         margin: 10px;
         padding-left: 10px;
         height: 30px;
@@ -107,18 +135,18 @@ main {
         margin-top: 10px;
       }
 
-      #botaoFechar {
+      #botaoFechar, #botaoFechar-cadastro {
         opacity: 0.4;
         position: absolute;
         top: 5%;
         right: 5%;
       }
 
-      #botaoFechar img {
+      #botaoFechar img, #botaoFechar-cadastro img {
         width: 30px;
       }
 
-      #fundo {
+      #fundo, #fundo-cadastro {
         position: absolute;
         top: 0;
         left: 0;
@@ -128,7 +156,7 @@ main {
         display: none;
       }
 
-       #fundo.visivel {
+       #fundo.visivel, #fundo-cadastro.visivel {
         display: flex;
       }
 

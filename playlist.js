@@ -86,9 +86,9 @@ var playlistUl = document.querySelector("#playlist ul");
 
 for(var i = 0; i< playlist.length; i++){
     console.log(playlist[i].name);
-    var li = document.createElement("li");
-    var h3 = document.createElement("h3");
-    var spanAlbum = document.createElement("span");
+    var li = document.createElement("li");//<li data-id=0>...</li>
+    var h3 = document.createElement("h3");//<h3>...</h3>
+    var spanAlbum = document.createElement("span");//<span>...</span>
     var spanArtista = document.createElement("span");
 
 
@@ -98,11 +98,24 @@ for(var i = 0; i< playlist.length; i++){
     spanArtista.innerText = playlist[i].artists;
     spanArtista.classList.add("artistas");
 
-    li.setAttribute("data-id", i); // <li data-id="i"></li>
+    li.setAttribute("data-id", i); // <li data-id="i">...</li>
 
     li.appendChild(h3);
+    //<li>
+    //  <h3>...</h3>
+    //</li>
+
     li.appendChild(spanAlbum);
+    //<li>
+    //  <h3>...</h3>
+    //  <span class="album">...</span>
+    //</li>
+
     li.appendChild(spanArtista);
+    //<li>
+    //  <h3>...</h3>
+    //  <span class="artista">...</span>
+    //</li>
 
     playlistUl.appendChild(li);
 
@@ -120,8 +133,10 @@ function mudarMusica() {
     var audio = document.querySelector("audio");
     audio.src = playlist[id].preview_url;
     audio.play();
+
     var capa = document.querySelector(".capa-album");
     capa.src = playlist[id].album.cover;
+    
     var nomeMusica = document.querySelector(".musica h1");
     nomeMusica.textContent = playlist[id].album.name;
     console.log(playlist[id]);
